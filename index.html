@@ -1,0 +1,1162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMD | Full Stack Developer</title>
+    
+    <!-- Meta tags -->
+    <meta name="description" content="Professional portfolio of Sahabdeen Mohammed Dilsath (SMD) — Full Stack Developer specializing in React, Next.js, PHP, MySQL, and practical digital experiences." />
+    <meta name="keywords" content="SMD, Sahabdeen Mohammed Dilsath, Full Stack Developer, React, Next.js, PHP, MySQL, Web Developer Sri Lanka, JavaScript, Portfolio" />
+    <meta name="author" content="Sahabdeen Mohammed Dilsath" />
+    <meta property="og:title" content="SMD | Full Stack Developer" />
+    <meta property="og:description" content="Professional portfolio of Sahabdeen Mohammed Dilsath (SMD) — Full Stack Developer building modern web applications, relational databases, and practical digital experiences." />
+    <meta property="og:image" content="/images/dilsath.jpg" />
+    <meta property="og:type" content="website" />
+
+    <!-- Google Fonts: Plus Jakarta Sans + Playfair Display (Italic Accents) + DM Mono (Telemetry) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Playfair+Display:ital,wght@1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- Film Grain Cinematic Overlay (Sarang Space style) -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- Spotlight mouse follower layer -->
+    <div id="mouse-spotlight"></div>
+    <!-- Ambient particle background -->
+    <canvas id="ambient-canvas"></canvas>
+
+    <div id="app">
+      <!-- ==========================================
+           FULL-WIDTH FIXED MINIMAL HEADER
+           ========================================== -->
+      <header class="navbar-wrapper">
+        <nav class="navbar" id="main-nav" aria-label="Main Navigation">
+          <a href="#hero" class="nav-brand-logo">
+            <span>SMD</span><span class="dot">.</span>
+          </a>
+
+          <ul class="nav-links">
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#studio" class="nav-link">Studio</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li class="nav-divider" aria-hidden="true"></li>
+            <li>
+              <a href="/Sahabdeen_Mohammed_Dilsath_CV.pdf" download="Sahabdeen_Mohammed_Dilsath_CV.pdf" class="nav-btn-icon" id="open-cv-btn" title="Download Curriculum Vitae (PDF)" aria-label="Download Curriculum Vitae (PDF)">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <span>CV</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact" class="nav-btn-start" aria-label="Let's Work Together">
+                <span>Let's Work Together</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="nav-mobile-actions">
+            <a href="/Sahabdeen_Mohammed_Dilsath_CV.pdf" download="Sahabdeen_Mohammed_Dilsath_CV.pdf" class="nav-btn-icon nav-mobile-cv-btn" title="Download CV (PDF)" aria-label="Download CV (PDF)">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <span>CV</span>
+            </a>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+            </button>
+          </div>
+        </nav>
+
+        <!-- Mobile Navigation Dropdown Drawer -->
+        <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+          <ul class="mobile-nav-links">
+            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#services" class="mobile-nav-link">Services</a></li>
+            <li><a href="#studio" class="mobile-nav-link">Studio</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            <li class="mobile-nav-cta-item">
+              <a href="/Sahabdeen_Mohammed_Dilsath_CV.pdf" download="Sahabdeen_Mohammed_Dilsath_CV.pdf" class="btn-solid-primary mobile-cv-btn">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <span>Download CV (PDF)</span>
+              </a>
+              <a href="#contact" class="btn-solid-ghost mobile-start-btn">
+                <span>Let's Work Together</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <!-- ==========================================
+           HERO SECTION (Cinematic Developer Style)
+           ========================================== -->
+      <section class="hero-section" id="hero">
+        <div class="hero-bg-watermark">SMD</div>
+
+        <div class="hero-content">
+          <div class="hero-kicker">
+            <span class="kicker-badge">FULL STACK DEVELOPER · AI INTEGRATION</span>
+          </div>
+
+          <h1 class="hero-headline hero-clamp-text">
+            <span class="hero-ghost-line">Hey, I'm</span>
+            <span class="hero-name-line">Dilsath.</span>
+          </h1>
+
+          <div class="hero-subline">
+            <span class="subline-label">SPECIALIZING IN: Full-Stack Web Development</span>
+            <span id="dynamic-typing" class="typed-text">React & Next.js Platforms</span>
+            <span class="typing-cursor"></span>
+          </div>
+
+          <p class="hero-bio">
+            I build modern web applications and digital experiences that help businesses establish a stronger online presence. My focus is on clean design, intuitive user experiences, and reliable functionality across devices.
+          </p>
+
+          <p class="hero-bio-sub">
+            From responsive business websites to database-driven platforms, I work with React, Next.js, JavaScript, PHP, and MySQL to turn ideas into practical digital solutions.
+          </p>
+
+          <div class="hero-action-cluster">
+            <a href="#projects" class="btn-solid-primary">
+              <span>Explore My Work</span>
+            </a>
+            <a href="#studio" class="btn-solid-ghost">
+              <span>Let's Discuss Your Project</span>
+              <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="https://wa.me/94768700005" target="_blank" class="btn-solid-outline">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.316 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.718-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>Chat on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Interactive 3D WebGL Scene (Seamless Floating 3D Object) -->
+        <div class="hero-visual">
+          <div id="three-hero-container" class="three-floating-scene"></div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           STATISTICS SECTION
+           ========================================== -->
+      <section class="metrics-strip">
+        <div class="metric-box">
+          <span class="metric-badge-tag">Verified Work</span>
+          <span class="metric-box-title">Completed Projects</span>
+          <span class="metric-caption">Web applications and digital experiences built across different requirements.</span>
+        </div>
+        <div class="metric-box">
+          <span class="metric-badge-tag">Creative Track</span>
+          <span class="metric-box-title">Design Projects</span>
+          <span class="metric-caption">Visual identities, interfaces, and digital assets.</span>
+        </div>
+        <div class="metric-box">
+          <span class="metric-badge-tag">Academic</span>
+          <span class="metric-box-title">BSc (Hons) Computing</span>
+          <span class="metric-caption">Final-Year Undergraduate</span>
+        </div>
+        <div class="metric-box">
+          <span class="metric-badge-tag">Full-Stack</span>
+          <span class="metric-box-title">Technical Expertise</span>
+          <span class="metric-caption">Frontend, backend, databases, and API integration.</span>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SARANG SPACE CINEMATIC MARQUEE BAND
+           ========================================== -->
+      <section class="marquee-band" aria-label="Selected Projects">
+        <div class="marquee-track">
+          <div class="marquee-item">
+            <span>STUDYBUDDY AI</span>
+            <span class="marquee-dot">◆</span>
+            <span class="marquee-ghost">REACT & NEXT.JS</span>
+            <span class="marquee-dot">◆</span>
+            <span>LMR DIRECTORY</span>
+            <span class="marquee-dot">◆</span>
+            <span class="marquee-ghost">RELATIONAL DATABASES</span>
+            <span class="marquee-dot">◆</span>
+            <span>SOLACE FAMILY VILLA</span>
+            <span class="marquee-dot">◆</span>
+            <span class="marquee-ghost">FULL-STACK ARCHITECTURE</span>
+            <span class="marquee-dot">◆</span>
+            <span>UNIVERSITY LMS</span>
+            <span class="marquee-dot">◆</span>
+            <span class="marquee-ghost">API INTEGRATION</span>
+            <span class="marquee-dot">◆</span>
+          </div>
+          <div class="marquee-item" aria-hidden="true">
+            <span>STUDYBUDDY AI</span>
+            <span class="marquee-dot">◆</span>
+            <span class="marquee-ghost">REACT & NEXT.JS</span>
+            <span class="marquee-dot">◆</span>
+            <span>LMR DIRECTORY</span>
+            <span class="marquee-dot">◆</span>
+            <span class="marquee-ghost">RELATIONAL DATABASES</span>
+            <span class="marquee-dot">◆</span>
+            <span>SOLACE FAMILY VILLA</span>
+            <span class="marquee-dot">◆</span>
+            <span class="marquee-ghost">FULL-STACK ARCHITECTURE</span>
+            <span class="marquee-dot">◆</span>
+            <span>UNIVERSITY LMS</span>
+            <span class="marquee-dot">◆</span>
+            <span class="marquee-ghost">API INTEGRATION</span>
+            <span class="marquee-dot">◆</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           ABOUT ME SECTION
+           ========================================== -->
+      <section class="section" id="about">
+        <div class="about-cinematic-grid">
+          <!-- Portrait 3D Card on Left of About -->
+          <div class="about-portrait-wrap">
+            <div class="studio-portrait-frame" id="portrait-frame">
+              <div class="portrait-container">
+                <img src="/images/dilsath.jpg" alt="Sahabdeen Mohammed Dilsath (SMD)" class="portrait-photo" />
+                <div class="portrait-glass-sheen"></div>
+              </div>
+
+              <div class="portrait-badge-overlay">
+                <div class="overlay-brand-tag">SMD</div>
+                <div class="overlay-info">
+                  <span class="overlay-title">Sahabdeen Mohammed Dilsath</span>
+                  <span class="overlay-sub"><span class="pulse-indicator-mini"></span> FULL STACK DEVELOPER</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text-column">
+            <div class="section-eyebrow">ABOUT ME</div>
+            <h2 class="about-headline">I'm Dilsath.<br>Developer & Problem Solver.</h2>
+            
+            <p class="about-p">
+              I'm a Sri Lanka-based full-stack developer who enjoys building useful web applications, business websites, and digital experiences. I combine development and design to create solutions that are practical, responsive, and easy to use.
+            </p>
+            
+            <p class="about-p">
+              My technical interests include frontend development, backend logic, relational database design, API integration, and AI-powered application features. I work with technologies including React, JavaScript, PHP, MySQL, and Git.
+            </p>
+
+            <p class="about-p">
+              I'm currently completing my BSc (Hons) in Computing while developing practical projects and expanding my software engineering skills. I also have an interest in application security and responsible AI integration.
+            </p>
+
+            <p class="about-p" style="font-weight: 600; color: #ffffff;">
+              I believe good software should look good, work reliably, and solve a real problem.
+            </p>
+
+            <div class="about-action-row">
+              <a href="https://wa.me/94768700005" target="_blank" class="btn-solid-ghost">
+                <span>Chat on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-meta-column">
+          <div class="meta-card">
+              <h3 class="meta-card-title">Technical Competencies</h3>
+              <div class="skills-groups-grid">
+                <div class="skill-group-block">
+                  <span class="skill-group-heading">Frontend Development</span>
+                  <div class="skill-group-tags">
+                    <span class="tech-tag">React.js</span>
+                    <span class="tech-tag">Next.js</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">Tailwind CSS</span>
+                  </div>
+                </div>
+
+                <div class="skill-group-block">
+                  <span class="skill-group-heading">Backend Development</span>
+                  <div class="skill-group-tags">
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">REST APIs</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express.js</span>
+                  </div>
+                </div>
+
+                <div class="skill-group-block">
+                  <span class="skill-group-heading">Databases</span>
+                  <div class="skill-group-tags">
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">Relational Database Design</span>
+                  </div>
+                </div>
+
+                <div class="skill-group-block">
+                  <span class="skill-group-heading">Tools and Deployment</span>
+                  <div class="skill-group-tags">
+                    <span class="tech-tag">Git</span>
+                    <span class="tech-tag">GitHub</span>
+                    <span class="tech-tag">Vercel</span>
+                    <span class="tech-tag">Netlify</span>
+                    <span class="tech-tag">Firebase</span>
+                  </div>
+                </div>
+
+                <div class="skill-group-block">
+                  <span class="skill-group-heading">Additional Interests</span>
+                  <div class="skill-group-tags">
+                    <span class="tech-tag">AI Integration</span>
+                    <span class="tech-tag">Application Security</span>
+                    <span class="tech-tag">UI/UX Design</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="meta-card" style="margin-top: 20px;">
+              <h3 class="meta-card-title">Education & Credentials</h3>
+              <ul class="meta-list">
+                <li>
+                  <strong>BSc (Hons) in Computing — Final-Year Undergraduate</strong>
+                  <span>Arden University, United Kingdom</span>
+                </li>
+                <li>
+                  <strong>International Higher Diploma in Computing — Completed</strong>
+                  <span>Buckinghamshire New University, United Kingdom</span>
+                </li>
+                <li>
+                  <strong>Certified LLM Security Professional (CLLMSP)</strong>
+                  <span>Red Team Leaders</span>
+                </li>
+                <li>
+                  <strong>Certified API Hacking Junior (CAPIJ)</strong>
+                  <span>Security Guild</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      <!-- ==========================================
+           SERVICES & EXPERTISE SECTION
+           ========================================== -->
+      <section class="section" id="services">
+        <div class="section-header">
+          <div class="header-pretitle">SERVICES & EXPERTISE</div>
+          <h2 class="header-title">What I Can Build</h2>
+          <p class="header-desc">I help businesses and individuals turn ideas into functional, well-designed digital products — from responsive websites to custom web applications and database-driven systems.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-box">
+            <div class="service-num">01</div>
+            <h3 class="service-title">Website & Frontend Development</h3>
+            <p class="service-summary">
+              I build responsive websites and user interfaces with modern layouts, clear navigation, and consistent experiences across desktop and mobile devices.
+            </p>
+            <div class="service-focus">
+              <strong>Focus:</strong> React, Next.js, JavaScript, HTML, CSS, Responsive Design.
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-box">
+            <div class="service-num">02</div>
+            <h3 class="service-title">Full-Stack Web Applications</h3>
+            <p class="service-summary">
+              I develop web applications that connect frontend interfaces with backend logic, databases, authentication, and APIs.
+            </p>
+            <div class="service-focus">
+              <strong>Focus:</strong> PHP, MySQL, React, REST APIs, Authentication.
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-box">
+            <div class="service-num">03</div>
+            <h3 class="service-title">Database & Business Systems</h3>
+            <p class="service-summary">
+              I design relational databases and build practical management systems tailored to business workflows and user requirements.
+            </p>
+            <div class="service-focus">
+              <strong>Focus:</strong> SQL, Relational Database Design, CRUD Operations, Role-Based Access Control.
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-box">
+            <div class="service-num">04</div>
+            <h3 class="service-title">AI Integration & UI Design</h3>
+            <p class="service-summary">
+              I explore AI-powered features and design polished interfaces that make digital products more useful and intuitive.
+            </p>
+            <div class="service-focus">
+              <strong>Focus:</strong> API Integration, AI-Powered Features, UI/UX Design, Application Usability.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SELECTED WORK (Case Studies)
+           ========================================== -->
+      <section class="section" id="projects">
+        <div class="section-header">
+          <div class="header-pretitle">PORTFOLIO SHOWCASE</div>
+          <h2 class="header-title">Selected Projects</h2>
+          <p class="header-desc">A selection of web applications, digital experiences, and software projects demonstrating my development and design skills.</p>
+        </div>
+
+        <div class="project-filter-toolbar">
+          <button class="filter-pill active" data-filter="all">All Projects (4)</button>
+          <button class="filter-pill" data-filter="ai">Web Apps & AI (1)</button>
+          <button class="filter-pill" data-filter="client">Client Projects (2)</button>
+          <button class="filter-pill" data-filter="fullstack">Academic Systems (1)</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: StudyBuddy AI -->
+          <article class="browser-frame-card" data-category="ai">
+            <div class="browser-top-bar">
+              <div class="browser-traffic-lights">
+                <span class="traffic-dot red"></span>
+                <span class="traffic-dot yellow"></span>
+                <span class="traffic-dot green"></span>
+              </div>
+              <div class="browser-url-pill">studybuddy-ai-eosin.vercel.app</div>
+              <a href="https://studybuddy-ai-eosin.vercel.app/" target="_blank" class="browser-external-link" title="Open Live Web Application">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+
+            <div class="browser-preview-media">
+              <img src="/images/project-studybuddy.jpg" alt="StudyBuddy AI Platform" class="browser-screenshot" loading="lazy" />
+              <div class="media-stack-chip">Next.js 15 • React 19 • AI Synthesis</div>
+            </div>
+
+            <div class="browser-card-content">
+              <div class="card-title-row">
+                <span class="project-status-badge status-live">
+                  <span class="status-dot"></span> Live Demo
+                </span>
+                <a href="https://github.com/Dilsath0512" target="_blank" class="github-repo-link" title="Source Repository">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+
+              <h3 class="card-system-title">StudyBuddy AI — Notes Summarizer & Quiz Engine</h3>
+              
+              <p class="card-summary">
+                A study-focused application designed to help users organise learning materials and explore document summarisation and quiz-generation workflows.
+              </p>
+
+              <div class="card-details-list">
+                <div class="card-details-item">
+                  <strong>Role & Contribution:</strong> Full-Stack Developer & UI Designer. Implemented Next.js frontend, user authentication, in-memory file parsing, and responsive UI.
+                </div>
+                <div class="card-details-item">
+                  <strong>Implemented Features:</strong> In-memory document parsing (PDF, DOCX, TXT), automated structured summaries, active-recall quiz generation, Firebase OAuth authentication, and plain-text export.
+                </div>
+              </div>
+
+              <div class="card-tech-pills">
+                <span class="tech-pill">Next.js App Router</span>
+                <span class="tech-pill">React 19</span>
+                <span class="tech-pill">Firebase Auth</span>
+                <span class="tech-pill">Tailwind CSS</span>
+                <span class="tech-pill">Vercel</span>
+              </div>
+
+              <div class="card-actions-cluster">
+                <a href="https://studybuddy-ai-eosin.vercel.app/" target="_blank" class="btn-card-action primary">
+                  <span>View Live Demo</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="https://github.com/Dilsath0512" target="_blank" class="btn-card-action secondary">
+                  <span>View Source Code</span>
+                  <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Lawyers For Minority Rights -->
+          <article class="browser-frame-card" data-category="client">
+            <div class="browser-top-bar">
+              <div class="browser-traffic-lights">
+                <span class="traffic-dot red"></span>
+                <span class="traffic-dot yellow"></span>
+                <span class="traffic-dot green"></span>
+              </div>
+              <div class="browser-url-pill">slmc-lawyer.vercel.app</div>
+              <a href="https://slmc-lawyer.vercel.app/" target="_blank" class="browser-external-link" title="Open Live Web Application">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+
+            <div class="browser-preview-media">
+              <img src="/images/project-lmr.jpg" alt="Lawyers For Minority Rights Platform" class="browser-screenshot" loading="lazy" />
+              <div class="media-stack-chip">Trilingual • All 25 Districts • Prototype</div>
+            </div>
+
+            <div class="browser-card-content">
+              <div class="card-title-row">
+                <span class="project-status-badge status-prototype">
+                  <span class="status-dot"></span> Working Prototype
+                </span>
+                <a href="https://slmc-lawyer.vercel.app/" target="_blank" class="github-repo-link" title="Live Site">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+
+              <h3 class="card-system-title">Lawyers for Minority Rights (LMR) Directory</h3>
+              
+              <p class="card-summary">
+                A legal directory website concept designed to help users explore lawyer listings, filter by relevant criteria, and access legal assistance information.
+              </p>
+
+              <div class="card-details-list">
+                <div class="card-details-item">
+                  <strong>Role & Contribution:</strong> Frontend Developer & UI Designer. Designed the user interface, directory filtering logic, and multilingual layout.
+                </div>
+                <div class="card-details-item">
+                  <strong>Implemented Features:</strong> Trilingual support (English, Tamil, Sinhala), district filtering across all 25 districts, lawyer profile preview, and structured inquiry form layouts (prototype frontend).
+                </div>
+              </div>
+
+              <div class="card-tech-pills">
+                <span class="tech-pill">React.js</span>
+                <span class="tech-pill">Trilingual i18n</span>
+                <span class="tech-pill">Directory Filtering</span>
+                <span class="tech-pill">Tailwind CSS</span>
+                <span class="tech-pill">Vercel</span>
+              </div>
+
+              <div class="card-actions-cluster">
+                <a href="https://slmc-lawyer.vercel.app/" target="_blank" class="btn-card-action primary">
+                  <span>View Live Demo</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Solace Villa -->
+          <article class="browser-frame-card" data-category="client">
+            <div class="browser-top-bar">
+              <div class="browser-traffic-lights">
+                <span class="traffic-dot red"></span>
+                <span class="traffic-dot yellow"></span>
+                <span class="traffic-dot green"></span>
+              </div>
+              <div class="browser-url-pill">solacefamliyvilla.netlify.app</div>
+              <a href="https://solacefamliyvilla.netlify.app" target="_blank" class="browser-external-link" title="Open Live Web Application">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+
+            <div class="browser-preview-media">
+              <img src="/images/project-solace.jpg" alt="Solace Family Villa Hospitality Website" class="browser-screenshot" loading="lazy" />
+              <div class="media-stack-chip">Hospitality • Guest Inquiries • React.js</div>
+            </div>
+
+            <div class="browser-card-content">
+              <div class="card-title-row">
+                <span class="project-status-badge status-live">
+                  <span class="status-dot"></span> Live Demo
+                </span>
+                <a href="https://solacefamliyvilla.netlify.app" target="_blank" class="github-repo-link" title="Live Site">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+
+              <h3 class="card-system-title">Solace Family Villa — Hospitality Website</h3>
+              
+              <p class="card-summary">
+                A hospitality website concept showcasing accommodation, visual presentation, property information, and guest enquiry workflows.
+              </p>
+
+              <div class="card-details-list">
+                <div class="card-details-item">
+                  <strong>Role & Contribution:</strong> Frontend Developer & UI Designer. Created responsive layouts, room presentation showcases, and booking inquiry workflows.
+                </div>
+                <div class="card-details-item">
+                  <strong>Implemented Features:</strong> Modern property visual presentation, interactive room gallery, accommodation packages, and direct guest inquiry workflow.
+                </div>
+              </div>
+
+              <div class="card-tech-pills">
+                <span class="tech-pill">React.js</span>
+                <span class="tech-pill">Tailwind CSS</span>
+                <span class="tech-pill">Guest Inquiry</span>
+                <span class="tech-pill">Netlify Hosting</span>
+              </div>
+
+              <div class="card-actions-cluster">
+                <a href="https://solacefamliyvilla.netlify.app" target="_blank" class="btn-card-action primary">
+                  <span>View Live Demo</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: LMS Capstone -->
+          <article class="browser-frame-card" data-category="fullstack">
+            <div class="browser-top-bar">
+              <div class="browser-traffic-lights">
+                <span class="traffic-dot red"></span>
+                <span class="traffic-dot yellow"></span>
+                <span class="traffic-dot green"></span>
+              </div>
+              <div class="browser-url-pill">Academic Project • PHP/MySQL</div>
+              <button class="browser-external-link" id="lms-view-details" title="View Capstone Architecture">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              </button>
+            </div>
+
+            <div class="browser-preview-media">
+              <img src="/images/project-lms.jpg" alt="University Learning Management System" class="browser-screenshot" loading="lazy" />
+              <div class="media-stack-chip">Academic Project • PHP • MySQL • RBAC</div>
+            </div>
+
+            <div class="browser-card-content">
+              <div class="card-title-row">
+                <span class="project-status-badge status-academic">
+                  <span class="status-dot"></span> Academic Project
+                </span>
+              </div>
+
+              <h3 class="card-system-title">University Learning Management System</h3>
+              
+              <p class="card-summary">
+                An academic software project exploring student and faculty workflows, module management, timetable functionality, and relational database design.
+              </p>
+
+              <div class="card-details-list">
+                <div class="card-details-item">
+                  <strong>Role & Contribution:</strong> Full-Stack Developer (Academic Coursework). Designed database normalization schema and built backend CRUD operations.
+                </div>
+                <div class="card-details-item">
+                  <strong>Implemented Features:</strong> Normalized MySQL relational schemas, role-based access control for students and faculty, course module management, and timetable scheduling.
+                </div>
+              </div>
+
+              <div class="card-tech-pills">
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">MySQL Database</span>
+                <span class="tech-pill">Relational DB</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">HTML5 & CSS3</span>
+              </div>
+
+              <div class="card-actions-cluster">
+                <button type="button" class="btn-card-action secondary" id="lms-view-architecture">
+                  <span>Inspect Architecture Details</span>
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           CODE & ARCHITECTURE TERMINAL
+           ========================================== -->
+      <section class="section" id="code-architecture">
+        <div class="section-header">
+          <div class="header-pretitle">ARCHITECTURE DEEP DIVE</div>
+          <h2 class="header-title">Code Examples & Architecture</h2>
+          <p class="header-desc">Selected code examples and architectural patterns from my development projects.</p>
+        </div>
+
+        <div class="code-terminal-card">
+          <div class="terminal-header">
+            <div class="terminal-tabs">
+              <button class="terminal-tab active" data-tab="parser">DocumentParser.ts</button>
+              <button class="terminal-tab" data-tab="sql">DatabaseSchema.sql</button>
+              <button class="terminal-tab" data-tab="auth">AuthMiddleware.ts</button>
+            </div>
+            <button class="terminal-copy-btn" id="copy-code-btn">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              <span>Copy</span>
+            </button>
+          </div>
+          <div class="terminal-body">
+            <pre><code id="architecture-code-view" class="terminal-code">// In-Memory Document Parser & Active-Recall Quiz Synthesis Engine
+export async function parseDocumentStream(fileBuffer: ArrayBuffer, mimeType: string) {
+  const extractedText = await extractCleanText(fileBuffer, mimeType);
+  const quizPayload = await generateStructuredQuizzes(extractedText, {
+    maxItems: 10,
+    schemaVersion: '2.0-verified',
+    strictValidation: true
+  });
+  return quizPayload;
+}
+
+export async function executeDocumentExtraction(documentText: string) {
+  for (const modelName of MODEL_CASCADE) {
+    try {
+      const model = genAI.getGenerativeModel({
+        model: modelName,
+        generationConfig: {
+          responseMimeType: 'application/json',
+          responseSchema: {
+            type: SchemaType.ARRAY,
+            description: 'List of verified active recall quizzes',
+            items: {
+              type: SchemaType.OBJECT,
+              properties: {
+                question: { type: SchemaType.STRING },
+                answer: { type: SchemaType.STRING },
+                concept: { type: SchemaType.STRING },
+                difficulty: { type: SchemaType.STRING }
+              },
+              required: ['question', 'answer', 'concept']
+            }
+          }
+        }
+      });
+
+      const result = await model.generateContent([
+        { text: `Extract key active-recall questions from:\n${documentText}` }
+      ]);
+
+      return JSON.parse(result.response.text());
+    } catch (err) {
+      console.warn(`Fallback triggered: ${modelName} failed, cascading to next model.`);
+    }
+  }
+  throw new Error('All AI cascade pipelines exhausted.');
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           WHY WORK WITH ME (The Advantage)
+           ========================================== -->
+      <section class="section" id="why-me">
+        <div class="section-header">
+          <div class="header-pretitle">THE ADVANTAGE</div>
+          <h2 class="header-title">Why Work With Me</h2>
+          <p class="header-desc">I focus on understanding your requirements, building practical solutions, and creating digital experiences that balance design, functionality, and maintainability.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <h3 class="why-title">Clear Communication</h3>
+            <p class="why-text">
+              I discuss project goals, requirements, and priorities before development begins.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <h3 class="why-title">Design Meets Functionality</h3>
+            <p class="why-text">
+              I combine thoughtful UI design with practical implementation to create websites that are easy to navigate and use.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <h3 class="why-title">Solutions for Your Needs</h3>
+            <p class="why-text">
+              I tailor each project to its intended users, business goals, and technical requirements.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <h3 class="why-title">Responsive by Design</h3>
+            <p class="why-text">
+              I build with desktop and mobile usability in mind and test across relevant screen sizes.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <h3 class="why-title">Maintainable Code</h3>
+            <p class="why-text">
+              I aim for readable, organised code and a clear handover so the project can be maintained and improved.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <h3 class="why-title">Collaborative Development</h3>
+            <p class="why-text">
+              I share progress, gather feedback at agreed milestones, and keep project scope and delivery expectations clear.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           HOW IT WORKS (My Workflow)
+           ========================================== -->
+      <section class="section" id="workflow">
+        <div class="section-header">
+          <div class="header-pretitle">MY WORKFLOW</div>
+          <h2 class="header-title">How It Works</h2>
+          <p class="header-desc">A clear process from the initial idea to testing and delivery.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-num">01</span>
+            <h3 class="step-title">Discovery & Requirements</h3>
+            <p class="step-text">
+              We discuss your goals, target users, required features, timeline, and budget.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-num">02</span>
+            <h3 class="step-title">Planning & Design</h3>
+            <p class="step-text">
+              I plan the structure, user experience, data requirements, and technical approach before implementation.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-num">03</span>
+            <h3 class="step-title">Development & Feedback</h3>
+            <p class="step-text">
+              I build the agreed features, share progress, and incorporate feedback within the agreed scope.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-num">04</span>
+            <h3 class="step-title">Testing & Handover</h3>
+            <p class="step-text">
+              I test the agreed functionality, review responsive layouts, fix identified issues, and deploy the project according to the hosting arrangement.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PROJECT COMMISSIONING STUDIO
+           ========================================== -->
+      <section class="section" id="studio">
+        <div class="bespoke-console-panel">
+          <div class="console-header-block">
+            <div class="header-pretitle">START A PROJECT</div>
+            <h2 class="header-title">Let's Plan Your Next Project</h2>
+            <p class="header-desc">
+              Tell me about your idea, the features you need, and your preferred timeline. I'll review your requirements and get back to you with a suitable approach and quotation.
+            </p>
+          </div>
+
+          <form id="custom-project-form" class="console-form">
+            <div class="console-form-grid">
+              <div class="form-field-group">
+                <label for="project-type" class="field-label">Project Type</label>
+                <select id="project-type" class="field-select">
+                  <option value="Full-Stack Web Application">Full-Stack Web Application</option>
+                  <option value="Website & Frontend Development">Website & Frontend Development</option>
+                  <option value="Database & Business System">Database & Business System</option>
+                  <option value="AI Integration & UI Design">AI Integration & UI Design</option>
+                  <option value="Custom Software Solution">Custom Software Solution</option>
+                </select>
+              </div>
+
+              <div class="form-field-group">
+                <label for="project-timeline" class="field-label">Preferred Timeline</label>
+                <select id="project-timeline" class="field-select">
+                  <option value="standard">Standard Timeline (2 — 4 Weeks)</option>
+                  <option value="express">Fast-Track Sprint (1 — 2 Weeks)</option>
+                  <option value="comprehensive">Comprehensive Project (1 — 2 Months)</option>
+                  <option value="flexible">Flexible / Planning Phase</option>
+                </select>
+              </div>
+
+              <div class="form-field-group">
+                <label for="client-name" class="field-label">Your Name or Organisation</label>
+                <input type="text" id="client-name" class="field-input" placeholder="e.g. Alex Fernando / Studio Enterprise" />
+              </div>
+
+              <div class="form-field-group">
+                <label for="client-budget" class="field-label">Preferred Contact Method</label>
+                <select id="client-budget" class="field-select">
+                  <option value="WhatsApp Direct">WhatsApp Channel (+94 76 870 0005)</option>
+                  <option value="Email">Email Communication</option>
+                  <option value="Phone Call">Direct Phone Call</option>
+                </select>
+              </div>
+
+              <div class="form-field-group full-span">
+                <label class="field-label">Required Features</label>
+                <div class="modules-checkbox-grid">
+                  <label class="module-chip">
+                    <input type="checkbox" name="feature" value="Responsive Layout & UI" checked />
+                    <span>Responsive Layout & UI</span>
+                  </label>
+                  <label class="module-chip">
+                    <input type="checkbox" name="feature" value="User Authentication & RBAC" checked />
+                    <span>User Authentication & Roles</span>
+                  </label>
+                  <label class="module-chip">
+                    <input type="checkbox" name="feature" value="Relational Database (MySQL)" checked />
+                    <span>Relational Database (MySQL)</span>
+                  </label>
+                  <label class="module-chip">
+                    <input type="checkbox" name="feature" value="REST API Integration" checked />
+                    <span>REST API Integration</span>
+                  </label>
+                  <label class="module-chip">
+                    <input type="checkbox" name="feature" value="AI-Powered Features" />
+                    <span>AI-Powered Features</span>
+                  </label>
+                  <label class="module-chip">
+                    <input type="checkbox" name="feature" value="Multilingual Localization" />
+                    <span>Multilingual Localization</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-field-group full-span">
+                <label for="client-notes" class="field-label">Project Description</label>
+                <textarea id="client-notes" class="field-textarea" placeholder="Describe your project idea, required features, or any specific requirements..."></textarea>
+              </div>
+            </div>
+
+            <!-- Dynamic Scope Summary Box -->
+            <div id="project-scope-summary" class="console-summary-box"></div>
+
+            <div class="console-submit-bar">
+              <button type="button" class="btn-solid-primary" id="send-custom-whatsapp">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.316 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.718-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>Discuss on WhatsApp</span>
+              </button>
+              <button type="button" class="btn-solid-ghost" id="send-custom-email">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>Send Project Enquiry</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           FREQUENTLY ASKED QUESTIONS (FAQ Accordion)
+           ========================================== -->
+      <section class="section" id="faq">
+        <div class="section-header">
+          <div class="header-pretitle">COMMON QUESTIONS</div>
+          <h2 class="header-title">Frequently Asked Questions</h2>
+          <p class="header-desc">Answers to common inquiries regarding project timelines, scoping, collaboration models, and architecture.</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How long does a project take?</span>
+              <svg class="faq-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Timelines depend on the project scope, required features, integrations, and feedback cycles. I'll provide an estimated timeline after reviewing your requirements.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How is project pricing determined?</span>
+              <svg class="faq-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Pricing depends on complexity, functionality, integrations, testing, and delivery requirements. I'll share a quotation and agreed scope before development begins.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Do you work with international clients?</span>
+              <svg class="faq-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>I'm open to discussing projects with clients in Sri Lanka and internationally. Communication, milestones, and deliverables are agreed before work begins.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Can you integrate AI into an existing application?</span>
+              <svg class="faq-arrow" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+            <div class="faq-answer">
+              <p>Depending on the requirements, I can assess suitable AI APIs and integration approaches, including their costs, limitations, and data-handling considerations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           CONTACT SECTION
+           ========================================== -->
+      <section class="section" id="contact">
+        <div class="contact-cinematic-block">
+          <div class="section-eyebrow">GET IN TOUCH</div>
+          <h2 class="contact-mega-title">Let's Build Something Useful.</h2>
+          <p class="contact-mega-desc">
+            Have a website idea, a business challenge, or a project in mind? Share a few details and let's discuss how I can help.
+          </p>
+
+          <div class="contact-links-grid">
+            <a href="mailto:Mohmdlsth1129@gmail.com" class="contact-link-card">
+              <span class="card-channel-label">Email</span>
+              <span class="card-channel-val">Mohmdlsth1129@gmail.com</span>
+            </a>
+            <a href="https://wa.me/94768700005" target="_blank" class="contact-link-card">
+              <span class="card-channel-label">WhatsApp</span>
+              <span class="card-channel-val">+94 76 870 0005</span>
+            </a>
+            <a href="https://github.com/Dilsath0512" target="_blank" class="contact-link-card">
+              <span class="card-channel-label">GitHub</span>
+              <span class="card-channel-val">github.com/Dilsath0512</span>
+            </a>
+            <div class="contact-link-card">
+              <span class="card-channel-label">Location</span>
+              <span class="card-channel-val">Pottuvil, Sri Lanka</span>
+            </div>
+          </div>
+
+          <!-- Quick Message Form -->
+          <div class="contact-form-card" style="margin-top: 40px;">
+            <h3 class="form-card-title">Send a Project Enquiry</h3>
+            <form id="direct-message-form">
+              <div class="form-field-group" style="margin-bottom: 14px;">
+                <label for="contact-name" class="field-label">Full Name</label>
+                <input type="text" id="contact-name" class="field-input" placeholder="e.g. Alex Fernando" required />
+              </div>
+              <div class="form-field-group" style="margin-bottom: 14px;">
+                <label for="contact-email" class="field-label">Email Address or Phone Number</label>
+                <input type="text" id="contact-email" class="field-input" placeholder="e.g. user@domain.com or +94 77..." required />
+              </div>
+              <div class="form-field-group" style="margin-bottom: 18px;">
+                <label for="contact-msg" class="field-label">Project Details</label>
+                <textarea id="contact-msg" class="field-textarea" placeholder="Describe your project, website idea, or requirements..." required></textarea>
+              </div>
+              <button type="submit" class="btn-solid-primary" style="width: 100%; justify-content: center;">
+                <span>Send Enquiry</span>
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           FOOTER
+           ========================================== -->
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-brand-side">
+            <div class="footer-meta">
+              <a href="#hero" class="nav-brand-logo footer-logo" aria-label="SMD Home">
+                <span>SMD</span><span class="dot">.</span>
+              </a>
+              <span class="footer-caption">Full Stack Developer | Building Practical Digital Experiences</span>
+            </div>
+          </div>
+          <div class="footer-links-side">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <span class="footer-copyright">© 2026 SMD. All rights reserved.</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ==========================================
+         DILLU AI COPILOT INTERFACE
+         ========================================== -->
+    <div class="dillu-copilot-trigger" id="dillu-trigger-container">
+      <button class="copilot-pill-btn" id="dillu-toggle-btn" aria-label="Open Dillu AI Copilot">
+        <div class="copilot-avatar-wrap">
+          <img src="/images/dillu_3d_robot.jpg" alt="Dillu Copilot" class="copilot-avatar-img" />
+          <span class="copilot-status-dot"></span>
+        </div>
+        <span class="copilot-pill-text">Dillu Copilot</span>
+      </button>
+    </div>
+
+    <!-- Dillu Copilot Drawer / Modal -->
+    <div class="dillu-chat-drawer" id="dillu-drawer" role="dialog" aria-modal="true">
+      <div class="dillu-drawer-header">
+        <div class="dillu-header-left">
+          <div class="dillu-header-avatar-frame">
+            <img src="/images/dillu_3d_robot.jpg" alt="Dillu 3D Robot" class="dillu-header-img" />
+            <span class="dillu-avatar-status-dot"></span>
+          </div>
+          <div class="dillu-header-meta">
+            <h4>Dillu Copilot</h4>
+            <span>Virtual Assistant</span>
+          </div>
+        </div>
+        <div class="dillu-header-controls">
+          <button class="dillu-btn-ctrl" id="dillu-voice-toggle" title="Toggle Voice Speech" aria-label="Toggle Voice Speech">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          </button>
+          <button class="dillu-btn-ctrl" id="dillu-close-btn" title="Close Copilot" aria-label="Close Copilot">
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Messages Stream (Full height, clean, responsive) -->
+      <div class="dillu-messages-stream" id="dillu-messages">
+        <!-- Initial Welcome Message -->
+        <div class="chat-bubble bot">
+          <strong>Hello! I am Dillu</strong>, AI assistant for Sahabdeen Mohammed Dilsath (SMD).
+          <br><br>
+          You can ask me anything about his full-stack applications, technical stack, database architectures, or commissioning a bespoke project.
+          <div class="chat-action-chips">
+            <span class="chat-chip" data-query="Who is Sahabdeen Mohammed Dilsath?">About SMD</span>
+            <span class="chat-chip" data-query="Tell me about StudyBuddy AI">StudyBuddy AI</span>
+            <span class="chat-chip" data-trigger="download-cv">Download CV (PDF)</span>
+            <span class="chat-chip" data-trigger="open-project-builder">Commission Project</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Action Suggestions Docked Directly Above Input Bar (No Overlap) -->
+      <div class="dillu-quick-suggestions" id="dillu-quick-suggestions">
+        <button class="suggestion-pill" data-prompt="Who is Sahabdeen Mohammed Dilsath?">Who is Dilsath?</button>
+        <button class="suggestion-pill" data-prompt="Tell me about StudyBuddy AI">StudyBuddy AI</button>
+        <button class="suggestion-pill" data-prompt="What is his technical stack?">Tech Stack</button>
+        <button class="suggestion-pill" data-prompt="What is his educational background?">Education</button>
+        <button class="suggestion-pill" data-prompt="How can I contact or hire Dilsath?">Hire Dilsath</button>
+      </div>
+
+      <form id="dillu-form" class="dillu-input-bar">
+        <input
+          type="text"
+          id="dillu-input"
+          class="dillu-chat-input"
+          placeholder="Ask Dillu anything about Dilsath..."
+          autocomplete="off"
+        />
+        <button type="submit" id="dillu-send-btn" class="dillu-send-btn" aria-label="Send Message">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- Core Javascript Entrypoint -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
