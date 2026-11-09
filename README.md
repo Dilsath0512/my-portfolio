@@ -16,6 +16,9 @@ This portfolio serves as an interactive showcase of practical software developme
 
 ## Featured Projects
 
+### Colombo Associates
+A premier corporate, commercial, and dispute resolution legal practice web platform and backend engine in Colombo, Sri Lanka. Features 10 specialized firm pages, conflict-checked matter intake API, recruitment vault with magic-byte document validation, and interactive insights filtering.
+
 ### StudyBuddy AI
 An intelligent notes summarization and active-recall quiz generation web application built with Next.js, React, and Firebase Authentication. Supports in-memory document parsing (PDF, DOCX, TXT) and structured study workflows.
 

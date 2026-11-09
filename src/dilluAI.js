@@ -21,6 +21,13 @@ export class DilluAI {
       },
       projects: [
         {
+          id: 'colombo',
+          title: 'Colombo Associates — Corporate Legal Web Platform',
+          status: 'Live Demo',
+          url: 'https://colombo-associates.vercel.app',
+          desc: 'A modern, high-performance web platform and backend engine for a premier corporate, commercial, and dispute resolution law firm in Colombo, Sri Lanka.'
+        },
+        {
           id: 'studybuddy',
           title: 'StudyBuddy AI — Notes Summarizer & Quiz Engine',
           status: 'Working Prototype',
@@ -150,14 +157,30 @@ export class DilluAI {
     }
 
     // 3. Featured Projects
+    if (this.matches(q, ['colombo', 'colombo associates', 'law firm', 'legal platform'])) {
+      return {
+        reply: `<strong>Colombo Associates — Corporate Legal Web Platform:</strong><br><br>
+        A premier corporate, commercial, and dispute resolution legal practice in Sri Lanka.<br><br>
+        • <strong>Live Platform:</strong> <a href="https://colombo-associates.vercel.app" target="_blank" class="chat-inline-link">colombo-associates.vercel.app</a><br>
+        • <strong>Source Code:</strong> <a href="https://github.com/Dilsath0512/colombo-associates" target="_blank" class="chat-inline-link">github.com/Dilsath0512/colombo-associates</a><br>
+        • <strong>Architecture:</strong> Node.js backend engine, 10 specialized firm practice pages, conflict-checked client matter intake API, and recruitment vault with magic-byte document validation.`,
+        actions: [
+          { label: 'View Live Platform', url: 'https://colombo-associates.vercel.app' },
+          { label: 'GitHub Repository', url: 'https://github.com/Dilsath0512/colombo-associates' }
+        ]
+      };
+    }
+
     if (this.matches(q, ['project', 'work', 'studybuddy', 'lmr', 'solace', 'lms', 'portfolio work', 'show projects'])) {
       return {
         reply: `<strong>Selected Projects:</strong><br><br>
-        1. <strong>StudyBuddy AI — Notes Summarizer & Quiz Engine</strong> (Working Prototype) — Study-focused application exploring document summarisation and quiz-generation workflows.<br>
-        2. <strong>Lawyers for Minority Rights (LMR) Directory</strong> (Working Prototype) — Multilingual legal directory concept covering all 25 districts of Sri Lanka.<br>
-        3. <strong>Solace Family Villa — Hospitality Website</strong> (Live Demo) — Hospitality website showcasing accommodation, visual presentation, and guest enquiry workflows.<br>
-        4. <strong>University Learning Management System</strong> (Academic Project) — Academic software project exploring student/faculty workflows, module management, and relational database design.`,
+        1. <strong>Colombo Associates — Corporate Legal Web Platform</strong> (Live Demo) — Corporate web platform and backend engine with matter intake API and recruitment vault.<br>
+        2. <strong>StudyBuddy AI — Notes Summarizer & Quiz Engine</strong> (Working Prototype) — Study-focused application exploring document summarisation and quiz-generation workflows.<br>
+        3. <strong>Lawyers for Minority Rights (LMR) Directory</strong> (Working Prototype) — Multilingual legal directory concept covering all 25 districts of Sri Lanka.<br>
+        4. <strong>Solace Family Villa — Hospitality Website</strong> (Live Demo) — Hospitality website showcasing accommodation, visual presentation, and guest enquiry workflows.<br>
+        5. <strong>University Learning Management System</strong> (Academic Project) — Academic software project exploring student/faculty workflows, module management, and relational database design.`,
         actions: [
+          { label: 'Colombo Associates Live', url: 'https://colombo-associates.vercel.app' },
           { label: 'StudyBuddy AI Live', url: 'https://studybuddy-ai-eosin.vercel.app/' },
           { label: 'LMR Directory Live', url: 'https://slmc-lawyer.vercel.app/' },
           { label: 'Solace Villa Live', url: 'https://solacefamliyvilla.netlify.app' }
