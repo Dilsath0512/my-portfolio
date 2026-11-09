@@ -24,7 +24,7 @@ export class DilluAI {
           id: 'colombo',
           title: 'Colombo Associates — Corporate Legal Web Platform',
           status: 'Live Demo',
-          url: 'https://colombo-associates.vercel.app',
+          url: 'https://colomboassociates.com',
           desc: 'A modern, high-performance web platform and backend engine for a premier corporate, commercial, and dispute resolution law firm in Colombo, Sri Lanka.'
         },
         {
@@ -161,11 +161,11 @@ export class DilluAI {
       return {
         reply: `<strong>Colombo Associates — Corporate Legal Web Platform:</strong><br><br>
         A premier corporate, commercial, and dispute resolution legal practice in Sri Lanka.<br><br>
-        • <strong>Live Platform:</strong> <a href="https://colombo-associates.vercel.app" target="_blank" class="chat-inline-link">colombo-associates.vercel.app</a><br>
+        • <strong>Live Platform:</strong> <a href="https://colomboassociates.com" target="_blank" class="chat-inline-link">colomboassociates.com</a><br>
         • <strong>Source Code:</strong> <a href="https://github.com/Dilsath0512/colombo-associates" target="_blank" class="chat-inline-link">github.com/Dilsath0512/colombo-associates</a><br>
         • <strong>Architecture:</strong> Node.js backend engine, 10 specialized firm practice pages, conflict-checked client matter intake API, and recruitment vault with magic-byte document validation.`,
         actions: [
-          { label: 'View Live Platform', url: 'https://colombo-associates.vercel.app' },
+          { label: 'View Live Platform', url: 'https://colomboassociates.com' },
           { label: 'GitHub Repository', url: 'https://github.com/Dilsath0512/colombo-associates' }
         ]
       };
@@ -180,7 +180,7 @@ export class DilluAI {
         4. <strong>Solace Family Villa — Hospitality Website</strong> (Live Demo) — Hospitality website showcasing accommodation, visual presentation, and guest enquiry workflows.<br>
         5. <strong>University Learning Management System</strong> (Academic Project) — Academic software project exploring student/faculty workflows, module management, and relational database design.`,
         actions: [
-          { label: 'Colombo Associates Live', url: 'https://colombo-associates.vercel.app' },
+          { label: 'Colombo Associates Live', url: 'https://colomboassociates.com' },
           { label: 'StudyBuddy AI Live', url: 'https://studybuddy-ai-eosin.vercel.app/' },
           { label: 'LMR Directory Live', url: 'https://slmc-lawyer.vercel.app/' },
           { label: 'Solace Villa Live', url: 'https://solacefamliyvilla.netlify.app' }
